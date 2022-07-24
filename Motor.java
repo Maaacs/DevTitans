@@ -5,6 +5,11 @@ public class Motor{
 	private boolean ativo;
 
 
+	Motor(String novoModelo, float novoPotencia){
+		this.setModelo(novoM);
+		this.setPotencia(0.0f);
+		this.setMotor(false);
+	}
 
 		// get retorna o valor de um atributo 
 	public String getModelo(){
@@ -27,5 +32,14 @@ public class Motor{
 	}
 	public void setAtivo(boolean novoValor){
 		this.ativo = novoValor;
+	}
+
+	public void ligarMotor(){
+		this.setMotor(true);
+		System.out.println("....VRUMMMM");
+	}
+	public void desligarMotor(){
+		this.setMotor(false);
+		System.out.println("mmmmm.......");
 	}
 }
