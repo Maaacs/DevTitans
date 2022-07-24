@@ -4,14 +4,14 @@ public class Motor{
 	private float potencia;
 	private boolean ativo;
 
-
-	Motor(String novoModelo, float novoPotencia){
-		this.setModelo(novoM);
+	// construtor que inicializa o objeto "Motor" com os atributos Modelo e Potencia
+	Motor(String novoModelo, float novoValor){
+		this.setModelo(novoModelo);
 		this.setPotencia(0.0f);
-		this.setMotor(false);
+		this.setAtivo(false);
 	}
 
-		// get retorna o valor de um atributo 
+	// get retorna o valor de um atributo 
 	public String getModelo(){
 		return this.modelo;
 	}
@@ -23,7 +23,7 @@ public class Motor{
 	public float getPotencia(){
 		return this.potencia;
 	}
-	public void setPotencia(String novoValor){
+	public void setPotencia(float novoValor){
 		this.potencia = novoValor;
 	}
 
@@ -35,11 +35,11 @@ public class Motor{
 	}
 
 	public void ligarMotor(){
-		this.setMotor(true);
+		this.setAtivo(true);
 		System.out.println("....VRUMMMM");
 	}
 	public void desligarMotor(){
-		this.setMotor(false);
+		this.setAtivo(false);
 		System.out.println("mmmmm.......");
 	}
 }
