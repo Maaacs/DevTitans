@@ -1,16 +1,27 @@
+import java.util.Date;
+//package material.heranca;
 
 public class Aviao{
 
 	private String modelo;
 	private String identificador;
-	private boolean motor;
 	private float altura;
+	private boolean motorEsquerdo;
+	private boolean motorDireito;
+	private boolean estadoMotor;
+	private float acelerar;
+	private float desacelerar;
 
+	// construtor que inicializa o objeto "Aviao" com os seguintes atributos:
 	Aviao(String novoM, String novoId){
 		this.setModelo(novoM);
 		this.setIdentificador(novoId);
-		this.setMotor(false);
 		this.setAltura(0.0f);
+		this.setMotorEsquerdo(false);
+		this.setMotorDireito(false);
+		//this.estadoMotor(false);
+		//this.acelerar(0.0f);
+		//this.desacelerar(0.0f);
 	}
 
 	// get retorna o valor de um atributo 
@@ -30,11 +41,18 @@ public class Aviao{
 		this.identificador = novoValor;
 	}
 
-	public boolean getMotor(){
-		return this.motor;
+	public boolean getMotorEsquerdo(){
+		return this.motorEsquerdo;
 	}
-	public void setMotor(boolean novoValor){
-		this.motor = novoValor;
+	public void setMotorEsquerdo(boolean novoValor){
+		this.motorEsquerdo = novoValor;
+	}
+
+	public boolean getMotorDireito(){
+		return this.motorDireito;
+	}
+	public void setMotorDireito(boolean novoValor){	
+		this.motorDireito = novoValor;
 	}
 
 	public float getAltura(){
@@ -44,23 +62,63 @@ public class Aviao{
 		this.altura = novoValor;
 	}
 
+	// continuar os métodos ligar e desligar motor
 	public void ligarMotor(){
-		this.setMotor(true);
-		System.out.println("Vrummmmmmm");
+		this.getMotorEsquerdo();
+		this.getMotorDireito();
 	}
+
 	public void desligarMotor(){
-		this.setMotor(false);
-		System.out.println("........");
+		this.getMotorEsquerdo();
+		this.getMotorDireito();
+	}
+
+	public boolean getEstadoMotor(){
+		if(this.getMotorEsquerdo() || this.getMotorDireito()){
+			return(true);
+		}
+		else{
+			return(false);
+		}	
+	}
+	public void setEstadoMotor(boolean novoValor){
+		this.estadoMotor = novoValor;
 	}
 
 	public void imprimeEstadoMotor(){
-		if(this.getMotor()){
-			System.out.println("O motor está ligado..");
+		if(this.getMotorEsquerdo() & this.getMotorDireito()){
+			System.out.println("Os motores estão ligados..");
+		}
+		else if (this.getMotorEsquerdo()){
+			System.out.println("Somento o motor Esquerdo está ligado..");
+		}
+		else if (this.getMotorDireito()){
+			System.out.println("Somente o motor Direito está ligado..");
 		}
 		else{
-			System.out.println("O motor está desligado..");
+			System.out.println("Os motores estão desligados..");
 		}
 	}
+
+	//corrigir os métodos Acelerar e Desacelerar
+	/*public float getAcelerar(){
+		return this.acelerar;
+	}
+	public void setAcelerar(float novoValor){
+		if(ligarMotor()){ //corrigir 
+			this.acelerar = novoValor;
+		}
+
+	}
+	public float getDesacelerar(){
+		return this.desacelerar;
+	}
+	public void setDesacelerar(float novoValor){
+		if (desligarMotor()){ //corrigir 
+			this.desacelerar = novoValor;
+
+		}
+	}*/
 
 	public void imprimaOk(){
 		System.out.println("Ok");

@@ -34,11 +34,11 @@ public class Motor{
 		this.ativo = novoValor;
 	}
 
-	public void ligarMotor(){
+	public void Ligar(){
 		this.setAtivo(true);
 		System.out.println("....VRUMMMM");
 	}
-	public void desligarMotor(){
+	public void Desligar(){
 		this.setAtivo(false);
 		System.out.println("mmmmm.......");
 	}

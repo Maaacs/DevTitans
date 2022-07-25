@@ -6,7 +6,6 @@ class Main{
 
 		// inicializando variáveis
 		aeronauticoVeloz = new Motor(" ", 0.0f);
-		//baraoVermelho = new Aviao("Fokker DR11", "Freiherr");
 		baraoVermelho = new Aviao(" ", " ");
 		baraoVermelho.imprimaOk();
 
@@ -15,13 +14,11 @@ class Main{
 		aeronauticoVeloz.setPotencia(50.0f);
 		baraoVermelho.setModelo("Fokker DR1");
 		baraoVermelho.setIdentificador("Freiherr");
-		//baraoVermelho.setMotor(false);
 		baraoVermelho.setAltura(0.0f);
-		
-		/*baraoVermelho.ligarMotor();
-		baraoVermelho.desligarMotor();
-		baraoVermelho.setMotorDireito(false);
-		baraoVermelho.setMotorEsquerdo(true);*/
+		baraoVermelho.setMotorEsquerdo(false);
+		baraoVermelho.setMotorDireito(true);
+
+
 
 		System.out.println("Motor: "+aeronauticoVeloz.getModelo()+
 							"\nPotencia: "+aeronauticoVeloz.getPotencia()+
@@ -31,7 +28,9 @@ class Main{
 							"\nAltura: "+baraoVermelho.getAltura());
 
 		baraoVermelho.imprimeEstadoMotor();
-		baraoVermelho.imprimeEstadoMotor();
+		//baraoVermelho.imprimeEstadoMotor();
+		aeronauticoVeloz.Ligar();
+		aeronauticoVeloz.Desligar();
 
 	}
 }
