@@ -1,4 +1,3 @@
-
 class Main{
 	public static void main (String[] args){
 
@@ -16,19 +15,23 @@ class Main{
 		aeronauticoVeloz.setPotencia(50.0f);
 		baraoVermelho.setModelo("Fokker DR1");
 		baraoVermelho.setIdentificador("Freiherr");
-		baraoVermelho.setMotor(false);
+		//baraoVermelho.setMotor(false);
 		baraoVermelho.setAltura(0.0f);
 		
-		baraoVermelho.ligarMotor();
-		baraoVermelho.imprimeEstadoMotor();
+		/*baraoVermelho.ligarMotor();
 		baraoVermelho.desligarMotor();
-		baraoVermelho.imprimeEstadoMotor();
+		baraoVermelho.setMotorDireito(false);
+		baraoVermelho.setMotorEsquerdo(true);*/
 
 		System.out.println("Motor: "+aeronauticoVeloz.getModelo()+
 							"\nPotencia: "+aeronauticoVeloz.getPotencia()+
 							"\nModelo: "+baraoVermelho.getModelo()+
 							"\nId: "+baraoVermelho.getIdentificador()+
-							"\nStatus Motor: "+baraoVermelho.getMotor()+
+							//"\nStatus Motor: "+baraoVermelho.getMotor()+
 							"\nAltura: "+baraoVermelho.getAltura());
+
+		baraoVermelho.imprimeEstadoMotor();
+		baraoVermelho.imprimeEstadoMotor();
+
 	}
 }
