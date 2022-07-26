@@ -9,7 +9,6 @@ public class Aviao{
 	private boolean estadoMotor;
 	private float acelerar;
 	private float desacelerar;
-	private String ListaPassageiros;
 
 	// construtor que inicializa o objeto "Aviao" com os seguintes atributos:
 	Aviao(String novoM, String novoId, Motor novoMotorEsquerdo, Motor novoMotorDireito){
@@ -19,7 +18,7 @@ public class Aviao{
 		this.setMotorEsquerdo(novoMotorEsquerdo);
 		this.setMotorDireito(novoMotorDireito);
 		this.setAcelerar(0.0f);
-		this.desacelerar(0.0f);
+		this.setDesacelerar(0.0f);
 	}
 
 	// get retorna o valor de um atributo 
@@ -30,7 +29,6 @@ public class Aviao{
 	public void setModelo(String novoValor){
 		this.modelo = novoValor;
 	}
-
 
 	public String getIdentificador(){
 		return this.identificador;
@@ -118,7 +116,6 @@ public class Aviao{
 			this.desacelerar = novoValor - 50.0f;
 		}
 	}
-
 
 	public void imprimaOk(){
 		System.out.println("Ok");
