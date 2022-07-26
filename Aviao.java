@@ -1,27 +1,25 @@
-import java.util.Date;
-//package material.heranca;
-
+//atributos
 public class Aviao{
 
 	private String modelo;
 	private String identificador;
 	private float altura;
-	private boolean motorEsquerdo;
-	private boolean motorDireito;
+	private Motor motorEsquerdo;// classe do tipo Motor
+	private Motor motorDireito;// classe do tipo Motor
 	private boolean estadoMotor;
 	private float acelerar;
 	private float desacelerar;
+	private String ListaPassageiros;
 
 	// construtor que inicializa o objeto "Aviao" com os seguintes atributos:
-	Aviao(String novoM, String novoId){
+	Aviao(String novoM, String novoId, Motor novoMotorEsquerdo, Motor novoMotorDireito){
 		this.setModelo(novoM);
 		this.setIdentificador(novoId);
 		this.setAltura(0.0f);
-		this.setMotorEsquerdo(false);
-		this.setMotorDireito(false);
-		//this.estadoMotor(false);
-		//this.acelerar(0.0f);
-		//this.desacelerar(0.0f);
+		this.setMotorEsquerdo(novoMotorEsquerdo);
+		this.setMotorDireito(novoMotorDireito);
+		this.setAcelerar(0.0f);
+		this.desacelerar(0.0f);
 	}
 
 	// get retorna o valor de um atributo 
@@ -41,17 +39,17 @@ public class Aviao{
 		this.identificador = novoValor;
 	}
 
-	public boolean getMotorEsquerdo(){
+	public Motor getMotorEsquerdo(){
 		return this.motorEsquerdo;
 	}
-	public void setMotorEsquerdo(boolean novoValor){
+	public void setMotorEsquerdo(Motor novoValor){
 		this.motorEsquerdo = novoValor;
 	}
 
-	public boolean getMotorDireito(){
+	public Motor getMotorDireito(){
 		return this.motorDireito;
 	}
-	public void setMotorDireito(boolean novoValor){	
+	public void setMotorDireito(Motor novoValor){	
 		this.motorDireito = novoValor;
 	}
 
@@ -62,63 +60,65 @@ public class Aviao{
 		this.altura = novoValor;
 	}
 
-	// continuar os métodos ligar e desligar motor
 	public void ligarMotor(){
-		this.getMotorEsquerdo();
-		this.getMotorDireito();
+		this.getMotorEsquerdo().Ligar();//método ligar do objeto do tipo motor
+		this.getMotorDireito().Ligar();
 	}
 
 	public void desligarMotor(){
-		this.getMotorEsquerdo();
-		this.getMotorDireito();
+		this.getMotorEsquerdo().Desligar();////método desligar do objeto do tipo motor
+		this.getMotorDireito().Desligar();
 	}
 
 	public boolean getEstadoMotor(){
-		if(this.getMotorEsquerdo() || this.getMotorDireito()){
-			return(true);
+		if(this.getMotorEsquerdo().getAtivo() || this.getMotorDireito().getAtivo()){
+			return true;
 		}
 		else{
-			return(false);
+			return false;
 		}	
 	}
 	public void setEstadoMotor(boolean novoValor){
 		this.estadoMotor = novoValor;
 	}
 
-	public void imprimeEstadoMotor(){
-		if(this.getMotorEsquerdo() & this.getMotorDireito()){
-			System.out.println("Os motores estão ligados..");
-		}
-		else if (this.getMotorEsquerdo()){
-			System.out.println("Somento o motor Esquerdo está ligado..");
-		}
-		else if (this.getMotorDireito()){
-			System.out.println("Somente o motor Direito está ligado..");
-		}
-		else{
-			System.out.println("Os motores estão desligados..");
+	public void imprimeEstadoMotor(){ 
+		if(this.getMotorEsquerdo().getAtivo() & this.getMotorDireito().getAtivo()){ 
+			System.out.println("Os motores estão ligados.."); 
+		} else if (this.getMotorEsquerdo().getAtivo()){ 
+			System.out.println("Somento o motor Esquerdo está ligado.."); 
+		} else if (this.getMotorDireito().getAtivo()){ 
+			System.out.println("Somente o motor Direito está ligado.."); 
+		} else {
+			System.out.println("Os motores estão desligados.."); 
 		}
 	}
 
-	//corrigir os métodos Acelerar e Desacelerar
-	/*public float getAcelerar(){
+	public float getAcelerar(){
 		return this.acelerar;
 	}
 	public void setAcelerar(float novoValor){
-		if(ligarMotor()){ //corrigir 
+		if(this.getMotorEsquerdo().getAtivo() & this.getMotorDireito().getAtivo() ){
 			this.acelerar = novoValor;
 		}
-
+		else if (this.getMotorEsquerdo().getAtivo() || this.getMotorDireito().getAtivo()){
+			this.acelerar = novoValor - 50.0f;
+		}
 	}
+	
 	public float getDesacelerar(){
 		return this.desacelerar;
 	}
 	public void setDesacelerar(float novoValor){
-		if (desligarMotor()){ //corrigir 
-			this.desacelerar = novoValor;
-
+		if ((this.getMotorEsquerdo().getAtivo() == false & this.getMotorDireito().getAtivo()) == false){ 
+			this.desacelerar = novoValor - 100.0f;
+		}else if (this.getMotorEsquerdo().getAtivo() == false){ 
+			this.desacelerar = novoValor - 50.0f;
+		}else if (this.getMotorDireito().getAtivo() == false){ 
+			this.desacelerar = novoValor - 50.0f;
 		}
-	}*/
+	}
+
 
 	public void imprimaOk(){
 		System.out.println("Ok");
