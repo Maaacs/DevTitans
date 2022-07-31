@@ -1,9 +1,4 @@
 # DevTitans
 
-Hands on DevTitans.
+Hands on DevTitans Orientação à Objetos.
 Os códigos de cada Laboratório estão nas branches.
-=======
-# Orientação à Objeto
-
-Códigos dos laboratórios de Orientação à Objeto do segundo modulo do curso DevTitans
->>>>>>> LAB02
