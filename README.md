@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # DevTitans
 
 Hands on DevTitans.
-Os códigos dos módulos estão em seus respectivos Branches.
+Os códigos de cada Laboratório estão nas branches.
 =======
 # Orientação à Objeto
 
