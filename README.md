@@ -1,3 +1,3 @@
 # Orientação à Objeto
 
-Códigos dos laboratórios de Orientação à Objeto do segundo modulo do curso DevTitans
+Códigos do segundo laboratório de Orientação à Objeto do curso DevTitans.
