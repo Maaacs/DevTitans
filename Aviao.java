@@ -192,8 +192,8 @@ public class Aviao{
 				}
 			}*/
 				this.ListaPassageiros2.add(novoValor);
-				
-				if(ListaPassageiros2.size()==5){
+				int size = ListaPassageiros2.size();
+				if(ListaPassageiros2.size()==size){
 					System.out.println("\nTodos embarcaram :)");
 					System.out.println("\n");
 				}
@@ -203,7 +203,8 @@ public class Aviao{
 
 
 	public Passageiro getBuscarPassageiroPorCPF(String novoValor){
-		for (int i = 0; i < 5;i++){
+		int size = ListaPassageiros2.size();
+		for (int i = 0; i < size;i++){
 			//System.out.println("Passageiros"+ListaPassageiros2.get(i).getPrimeiroNome());
 			if(novoValor == ListaPassageiros2.get(i).getCPF()){
 				System.out.println("\nPassageiro"+" "+ ListaPassageiros2.get(i).getPrimeiroNome()+" "+"à bordo:");
@@ -239,8 +240,8 @@ public class Aviao{
 			System.out.println("\n");
 		}
 		else {
-			int tam = ListaPassageiros2.size();
-			for(int i = tam-1; i >= 0; i--){
+			int size = ListaPassageiros2.size();
+			for(int i = size-1; i >= 0; i--){
 				//System.out.println("Estou imprimindo um cara: "+ListaPassageiros2.get(i).getPrimeiroNome());
 				//System.out.println("numero do i "+i+" Size da minha lista "+tam);
 				//System.out.println("eu sou a vez de numero .. "+i);
