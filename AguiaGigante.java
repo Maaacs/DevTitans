@@ -1,4 +1,4 @@
-class AguiaGigante{
+class AguiaGigante implements Motorizavel{
 	float peso;
 	String nome;
 	float forca;
@@ -37,11 +37,34 @@ class AguiaGigante{
     }
 
     public boolean getAcordada() {
-        return acordada;
+        return acordada; // o método getAtivo() deve retornar o valor recebido pelo getAcordada()
     }
 
     private void setAcordada(boolean acordada) {
         this.acordada = acordada;
+    }
+
+    public boolean getAtivo(){
+    	return this.getAcordada();
+    }
+
+    /*if this.getAcordada(){
+    	return this.getForca(); // sem tempo pra corrigir esse problem irmão rsrs
+    }else {
+    	return 0;
+    }*/
+
+    public float getPotencia(){
+    	return (this.getAcordada() == true ? this.getForca() : 0); //com operador ternário foi mais liso rs
+    }
+
+    public void ligar(){
+    	setAcordada(true);
+    	System.out.println("GRAUINNNNN");
+    } 
+    public void desligar(){
+    	setAcordada(false);
+    	System.out.println("Zzzzzz");
     }
 
 

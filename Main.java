@@ -6,7 +6,12 @@ class Main{
 	     Motor motor1,motor2;
 	     Passageiro pass01,pass02,pass03;
 	     MotorTurbinado nitro;
+	     AguiaGigante aguiaTenebrosa;
+	     AguiaGigante aguiaBranca;
 	     
+
+	    aguiaTenebrosa = new AguiaGigante(1.000f, " ", 200.0f, true);
+	    aguiaBranca = new AguiaGigante(1.000f, " ", 200.0f, true); 
 	    nitro = new MotorTurbinado(" ", 0.0f); 
 	    pass01 = new Passageiro("Cruzes", "Vales", "22233344455");
 	    pass02 = new Passageiro("Jorginho", "Jovem", "33344455566");
@@ -22,14 +27,21 @@ class Main{
 	     			"\nAltura: "+baraoVermelho.getAltura());
 	     			
 	     			
-	     			
-	    nitro.ligar();			     
-	   	baraoVermelho.ligarMotor();
+	    baraoVermelho.setMotorEsquerdo(aguiaBranca);
+	    baraoVermelho.setMotorDireito(aguiaTenebrosa);
+	    aguiaTenebrosa.ligar();
+	    aguiaTenebrosa.desligar();
+	    aguiaBranca.ligar(); 
+	    aguiaBranca.desligar();
+	    baraoVermelho.ligarMotor();
+		nitro.ligar();	
+
+	   	/*baraoVermelho.ligarMotor();
 	    baraoVermelho.adicionarPassageiro(pass01);
 	    baraoVermelho.adicionarPassageiro(pass02);
 	    baraoVermelho.adicionarPassageiro(pass03);
 	    baraoVermelho.imprimirListaDePassageiros();
-	    baraoVermelho.desembarcaPassageiros();
+	    baraoVermelho.desembarcaPassageiros();*/
 	    /*baraoVermelho.imprimeEstadoMotor(); 		
 	    baraoVermelho.desligarMotor();
 	    baraoVermelho.imprimeEstadoMotor();  
