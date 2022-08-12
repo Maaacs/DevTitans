@@ -55,7 +55,7 @@ class AguiaGigante implements Motorizavel{
     }*/
 
     public float getPotencia(){
-    	return (this.getAcordada() == true ? this.getForca() : 0); //com operador ternário foi mais liso rs
+    	return (this.getAcordada() == true ? this.getForca() : 0); //com operador ternário foi mais liso
     }
 
     public void ligar(){
