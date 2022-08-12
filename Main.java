@@ -8,9 +8,9 @@ class Main{
 	     MotorTurbinado nitro;
 	     
 	    nitro = new MotorTurbinado(" ", 0.0f); 
-	    pass01 = new Passageiro("Fulano","de XPTO","1234");
-	    pass02 = new Passageiro("Beltrana","de XPTO","3456");
-	    pass03 = new Passageiro("Cicraninho","de XPTO","6789"); 
+	    pass01 = new Passageiro("Cruzes", "Vales", "22233344455");
+	    pass02 = new Passageiro("Jorginho", "Jovem", "33344455566");
+	    pass03 = new Passageiro("Yakisoba", "Kents", "44455566677"); 
 	          
 	     motor1 = new Motor("Siemens-Halske", 50f);
 	     motor2 = new Motor("Siemens-Halske", 50f);  
@@ -23,12 +23,14 @@ class Main{
 	     			
 	     			
 	     			
-	     nitro.ligar();			     
-	   /* baraoVermelho.ligarMotor();
+	    nitro.ligar();			     
+	   	baraoVermelho.ligarMotor();
 	    baraoVermelho.adicionarPassageiro(pass01);
 	    baraoVermelho.adicionarPassageiro(pass02);
 	    baraoVermelho.adicionarPassageiro(pass03);
-	    baraoVermelho.imprimeEstadoMotor(); 		
+	    baraoVermelho.imprimirListaDePassageiros();
+	    baraoVermelho.desembarcaPassageiros();
+	    /*baraoVermelho.imprimeEstadoMotor(); 		
 	    baraoVermelho.desligarMotor();
 	    baraoVermelho.imprimeEstadoMotor();  
 	    

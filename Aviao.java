@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-class Aviao{
+class Aviao{ // Agora vai receber  classes compatíveis com a interface Motorizavel
 
 	private String modelo;
 	private String identificador;
 	private boolean emVoo;
 	private float altura;
 	private float velocidade;
-	private Motor motorEsquerdo;
-	private Motor motorDireito;
+	private Motorizavel motorEsquerdo; //nao é mais tipo Motor e sim tipo Motorizavel
+	private Motorizavel motorDireito; //nao é mais tipo Motor e sim tipo Motorizavel
 	private ArrayList<Passageiro> listaPassageiros;
 	
 	
@@ -41,19 +41,19 @@ class Aviao{
 		this.identificador = novoValor;
 	}
 	
-	private Motor getMotorEsquerdo(){
+	public Motorizavel getMotorEsquerdo(){ // Alterando referência para o tipo motorizavel
 		return this.motorEsquerdo;
 	}
 	
-	private void setMotorEsquerdo(Motor novoValor){
+	public void setMotorEsquerdo(Motorizavel novoValor){ // Alterando parâmetro para o tipo motorizavel
 		this.motorEsquerdo = novoValor;
 	}
 	
-	private Motor getMotorDireito(){
+	public Motorizavel getMotorDireito(){// Alterando referência para o tipo motorizavel
 		return this.motorDireito;
 	}
 	
-	private void setMotorDireito(Motor novoValor){
+	public void setMotorDireito(Motorizavel novoValor){// Alterando parâmetro para o tipo motorizavel
 		this.motorDireito = novoValor;
 	}
 

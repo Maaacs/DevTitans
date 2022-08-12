@@ -1,4 +1,4 @@
-class Motor{
+public class Motor implements Motorizavel{ // agora a classe motor irá implementar a interface motorizável
 
 	private String modelo;
 	private boolean ativo;
