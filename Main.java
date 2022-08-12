@@ -77,31 +77,5 @@ class Main{
 }
 
 
-/*
- 
- baraoVermelho.setModelo("Fokker DR1");
-	     baraoVermelho.setIdentificador("Freiherr");
-	     baraoVermelho.setMotor(false);
-	     baraoVermelho.setAltura(0.0f);
-	     
-	    Passageiro pass01,pass02,pass03;
-	     
-	    pass01 = new Passageiro("Fulano","de XPTO","1234");
-	    pass02 = new Passageiro("Beltrana","de XPTO","3456");
-	    pass03 = new Passageiro("Cicraninho","de XPTO","6789"); 
-	     
-	    baraoVermelho.adicionarPassageiro(pass01);
-	    baraoVermelho.adicionarPassageiro(pass02);
-	    baraoVermelho.adicionarPassageiro(pass03);
-	     
-	    baraoVermelho.imprimirListaDePassageiros();
-	    System.out.println(baraoVermelho.buscaPassageiroPorCpf("1234").getPrimeiroNome());	
-	    
-	    baraoVermelho.imprimirListaDePassageiros();
-	    baraoVermelho.desembarcaPassageiros(); 
-	     
-	     
-*/
-
 
 
